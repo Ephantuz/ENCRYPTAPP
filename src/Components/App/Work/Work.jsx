@@ -2,33 +2,33 @@ import React, { useEffect, useRef } from 'react';
 import './Work.css';
 
 const Work = () => {
-    const countRef = useRef(null);
+    // const countRef = useRef(null);
 
-    useEffect(() => {
-        const countEl = countRef.current;
-        const incBtn = document.getElementById('increment');
-        const decBtn = document.getElementById('decrement');
+    // useEffect(() => {
+    //     const countEl = countRef.current;
+    //     const incBtn = document.getElementById('increment');
+    //     const decBtn = document.getElementById('decrement');
 
-        const handleIncrement = () => {
-            let value = parseInt(countEl.textContent, 10);
-            if (value < 8) value++;
-            countEl.textContent = value.toString().padStart(2, '0');
-        };
+    //     const handleIncrement = () => {
+    //         let value = parseInt(countEl.textContent, 10);
+    //         if (value < 8) value++;
+    //         countEl.textContent = value.toString().padStart(2, '0');
+    //     };
 
-        const handleDecrement = () => {
-            let value = parseInt(countEl.textContent, 10);
-            if (value > 1) value--;
-            countEl.textContent = value.toString().padStart(2, '0');
-        };
+    //     const handleDecrement = () => {
+    //         let value = parseInt(countEl.textContent, 10);
+    //         if (value > 1) value--;
+    //         countEl.textContent = value.toString().padStart(2, '0');
+    //     };
 
-        incBtn.addEventListener('click', handleIncrement);
-        decBtn.addEventListener('click', handleDecrement);
+    //     incBtn.addEventListener('click', handleIncrement);
+    //     decBtn.addEventListener('click', handleDecrement);
 
-        return () => {
-            incBtn.removeEventListener('click', handleIncrement);
-            decBtn.removeEventListener('click', handleDecrement);
-        };
-    }, []);
+    //     return () => {
+    //         incBtn.removeEventListener('click', handleIncrement);
+    //         decBtn.removeEventListener('click', handleDecrement);
+    //     };
+    // }, []);
 
     return (
         <div className="work-container">
